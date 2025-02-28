@@ -21,7 +21,7 @@ fun main() {
     println()
 
     // Create a list to store monkey names
-    val monkeys = null  // FIXME!
+    val monkeys = mutableListOf<String>()
 
     // Add in some test monkeys
     monkeys.add("Dave")
@@ -106,8 +106,10 @@ fun showMonkeys(monkeyList: List<String>) {
  */
 fun getNewMonkey(monkeyList: MutableList<String>) {
     // Ask the user for a monkey name
+    val name = readln()
 
     // Add the name to the list
+    monkeyList.add(name)
 
     // Show some feedback
     println("Added new monkey: $name")
@@ -144,7 +146,7 @@ fun deleteFirstMonkey(monkeyList: MutableList<String>) {
     // Remove the first one from the list
 
     // Show some feedback
-    println("Removing monkey: $name")
+    println("Removing monkey: NAME HERE")
 }
 
 
@@ -156,6 +158,6 @@ fun deleteLastMonkey(monkeyList: MutableList<String>) {
     // Remove the last one from the list
 
     // Show some feedback
-    println("Removing monkey: $name")
+    println("Removing monkey: NAME HERE")
 }
 
