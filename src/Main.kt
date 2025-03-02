@@ -13,8 +13,6 @@
  */
 
 
-
-
 fun main() {
     println("Kotlin Collections Task 1 - Monkeys")
     println("-----------------------------------")
@@ -122,7 +120,7 @@ fun showMonkeys(monkeyList: List<String>) {
 
     // Loop through the given list and show each monkey
     for ((i, name) in monkeyList.withIndex()) {
-        println("Monkey ${i+1}: $name")
+        println("Monkey ${i + 1}: $name")
     }
 
     println()
