@@ -13,13 +13,15 @@
  */
 
 
+val monkeys = mutableListOf<String>()
+
 fun main() {
     println("Kotlin Collections Task 1 - Monkeys")
     println("-----------------------------------")
     println()
 
     // Create a list to store monkey names
-    val monkeys = null  // FIXME!
+
 
     // Add in some test monkeys
     monkeys.add("Dave")
@@ -110,7 +112,9 @@ fun showMonkeys(monkeyList: List<String>) {
     println("-------------------")
 
     // Loop through the given list and show each monkey
-    check(false)   // FIXME: Remove this line and add your code
+    for ((index, monkeys) in monkeys.withIndex()) {
+        println("${index +1}: $monkeys")
+    }
 }
 
 
@@ -120,11 +124,11 @@ fun showMonkeys(monkeyList: List<String>) {
  */
 fun getNewMonkey(monkeyList: MutableList<String>) {
     // Ask the user for a monkey name (no blanks)
-
+    val newMonkey = getString("Monkey Name:")
     // Add the name to the list
-
+    monkeys.add(newMonkey)
     // Show some feedback
-    println("Added new monkey: NAME HERE")
+    println("Added new monkey: $newMonkey")
 }
 
 
@@ -171,5 +175,17 @@ fun deleteLastMonkey(monkeyList: MutableList<String>) {
 
     // Show some feedback
     println("Removing monkey: NAME HERE")
+}
+
+
+// mr copleys get string :thumbs_up:
+fun getString (prompt: String): String {
+    var userInput: String
+    while(true) {
+        print(prompt)
+        userInput = readln()
+        if (userInput.isNotBlank()) break
+    }
+    return userInput
 }
 
